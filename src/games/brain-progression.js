@@ -14,7 +14,7 @@ const result = () => {
     progression.push(minBound + i * progressionCoeff);
   }
 
-  const hidePosition = Math.ceil(Math.random() * PROGRESSION_LENGTH);
+  const hidePosition = Math.floor(Math.random() * PROGRESSION_LENGTH);
   const expectedAnswer = progression[hidePosition];
   progression[hidePosition] = '..';
 
