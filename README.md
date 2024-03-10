@@ -3,7 +3,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/478f7d7a2ac1aab4c5e4/maintainability)](https://codeclimate.com/github/instatrav18/fullstack-javascript-project-44/maintainability)
 
-#Setup
+# Setup
 
 `make install`
 
