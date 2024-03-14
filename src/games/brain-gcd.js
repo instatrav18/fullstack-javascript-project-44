@@ -1,11 +1,12 @@
 import readlineSync from 'readline-sync';
 import app from '../index.js';
+import getRandomInRange from '../utils.js';
 
-const maxNumber = 100;
+const MAX_NUMBER = 100;
 
 const result = () => {
-  const number1 = Math.ceil(Math.random() * maxNumber);
-  const number2 = Math.ceil(Math.random() * maxNumber);
+  const number1 = getRandomInRange(0, MAX_NUMBER);
+  const number2 = getRandomInRange(0, MAX_NUMBER);
 
   console.log(`Question: ${number1} ${number2}`);
   let divisor = 1;
@@ -21,4 +22,4 @@ const result = () => {
   return [answer, expectedAnswer];
 };
 
-export default () => app('brain-gcd', result);
+export default () => app('Find the greatest common divisor of given numbers.', result);
