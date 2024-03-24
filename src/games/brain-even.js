@@ -1,15 +1,13 @@
 import app from '../index.js';
 import getRandomInRange from '../utils.js';
 
-const MAX_NUMBER = 100;
-
-const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
+const isEven = (number) => number % 2 === 0;
 
 const generateRound = () => {
-  const number = getRandomInRange(0, MAX_NUMBER);
+  const number = getRandomInRange();
 
   const question = `${number}`;
-  const expectedAnswer = isEven(number);
+  const expectedAnswer = isEven(number) ? 'yes' : 'no';
 
   return [question, expectedAnswer];
 };

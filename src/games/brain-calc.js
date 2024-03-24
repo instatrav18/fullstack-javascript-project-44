@@ -1,8 +1,6 @@
 import app from '../index.js';
 import getRandomInRange from '../utils.js';
 
-const MAX_NUMBER = 100;
-
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[getRandomInRange(0, operators.length - 1)];
@@ -18,8 +16,8 @@ const calculation = (num1, num2, operator) => {
 };
 
 const generateRound = () => {
-  const num1 = getRandomInRange(0, MAX_NUMBER);
-  const num2 = getRandomInRange(0, MAX_NUMBER);
+  const num1 = getRandomInRange();
+  const num2 = getRandomInRange();
   const operator = getRandomOperator();
 
   const question = `${num1} ${operator} ${num2}`;
